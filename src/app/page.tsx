@@ -1,113 +1,65 @@
-import Image from "next/image";
+import PlayIcon from "@/icons/PlayIcon"
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
+    <main className="bg-white max-w-screen-lg m-auto rounded-2xl flex flex-col items-center h-full p-8 gap-8 overflow-auto">
+      <h1 className="text-4xl">Test de Lectura Rápida</h1>
+
+      <button className="flex text-[#0201CE] px-5 py-3  border border-[#0201CE] rounded-3xl gap-1">
+        <PlayIcon />
+
+        <span>Iniciar</span>
+      </button>
+
+      <div className="grid gap-4 text-justify">
+        <p>
+          Había una vez un principito que vivía en un pequeño asteroide. Su
+          planeta era apenas más grande que una casa, y tenía tres volcanes, uno
+          de ellos extinguido desde hacía millones de años. También tenía una
+          rosa que era muy hermosa y vanidosa. El principito la cuidaba con
+          mucho cariño, pero la rosa era exigente y demandante, y a menudo lo
+          hacía sentir infeliz.
         </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+        <p>
+          Un día, el principito decidió explorar otros mundos. Construyó un
+          pequeño avión y viajó por el espacio, visitando varios asteroides
+          diferentes. En cada asteroide conoció a una persona diferente, cada
+          una con sus propias peculiaridades y excentricidades.
+        </p>
+        <p>
+          En un asteroide conoció a un rey que no tenía súbditos, en otro a un
+          vanidoso que solo se preocupaba por su apariencia, en otro a un hombre
+          de negocios que estaba demasiado ocupado para disfrutar de la vida, y
+          en otro a un geógrafo que no sabía nada del mundo que lo rodeaba.
+        </p>
+        <p>
+          El principito se sintió cada vez más desilusionado con los adultos que
+          conoció. Le parecían egoístas, superficiales y sin sentido común.
+        </p>
+        <p>
+          Finalmente, el principito llegó a la Tierra, donde conoció a un zorro.
+          El zorro le enseñó el valor de la amistad y la importancia de crear
+          vínculos con los demás. El zorro le dijo: &quot;Solo se ve bien con el
+          corazón. Lo esencial es invisible para los ojos.&quot;
+        </p>
+        <p>
+          El principito también conoció a una flor que le habló de la
+          importancia de ser único y especial. La flor le dijo: &quot;Eres único
+          en el mundo para mí. No hay otro como tú. Esto es lo que te hace
+          importante. Es por eso que te amo.&quot;
+        </p>
+        <p>
+          El principito aprendió mucho durante sus viajes por el espacio. Se dio
+          cuenta de que lo más importante en la vida no son las cosas
+          materiales, sino las relaciones que tenemos con los demás y las
+          experiencias que compartimos.
+        </p>
+        <p>
+          Al final, el principito regresó a su asteroide y decidió cuidar a su
+          rosa con más amor y comprensión. También decidió explorar su propio
+          planeta con más atención, para descubrir sus secretos y tesoros.
+        </p>
       </div>
     </main>
-  );
+  )
 }
