@@ -1,15 +1,11 @@
-import PlayIcon from "@/icons/PlayIcon"
+import StartTestSection from "@/components/StartTestSection"
 
 export default function Home() {
   return (
     <main className="bg-white max-w-screen-lg m-auto rounded-2xl flex flex-col items-center h-full p-8 gap-8 overflow-auto">
       <h1 className="text-4xl">Test de Lectura Rápida</h1>
 
-      <button className="flex text-[#0201CE] px-5 py-3  border border-[#0201CE] rounded-3xl gap-1">
-        <PlayIcon />
-
-        <span>Iniciar</span>
-      </button>
+      <StartTestSection />
 
       <div className="grid gap-4 text-justify">
         <p>

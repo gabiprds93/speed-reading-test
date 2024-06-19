@@ -1,0 +1,2 @@
+export const FIRST_NUMBER_TWO_DIGITS = 10
+export const LAST_NUMBER_IN_TIME = 59
