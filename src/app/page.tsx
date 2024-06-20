@@ -1,4 +1,5 @@
 import StartTestSection from "@/components/StartTestSection"
+import EndTestSection from "@/components/EndTestSection"
 
 export default function Home() {
   return (
@@ -6,6 +7,8 @@ export default function Home() {
       <h1 className="text-4xl">Test de Lectura Rápida</h1>
 
       <StartTestSection />
+
+      <EndTestSection />
 
       <div className="grid gap-4 text-justify">
         <p>

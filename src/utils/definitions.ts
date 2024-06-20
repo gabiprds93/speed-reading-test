@@ -1,4 +1,10 @@
-import { AriaAttributes, ButtonHTMLAttributes, DetailedHTMLProps } from "react"
+import {
+  AriaAttributes,
+  ButtonHTMLAttributes,
+  DetailedHTMLProps,
+  Dispatch,
+  SetStateAction,
+} from "react"
 
 export interface ButtonProps
   extends DetailedHTMLProps<
@@ -6,3 +12,14 @@ export interface ButtonProps
       HTMLButtonElement
     >,
     AriaAttributes {}
+
+export interface ITime {
+  hours: number
+  minutes: number
+  seconds: number
+}
+
+export interface ITimeContext {
+  time: ITime
+  setTime: Dispatch<SetStateAction<ITime>>
+}
