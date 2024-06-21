@@ -41,7 +41,7 @@ export default function EndTestSection() {
       )}
 
       {showResults && (
-        <div>
+        <div className="text-[#0201CE]">
           <p>Velocidad de Lectura = {timeInMinutes} minutos</p>
 
           <p>Velocidad Promedio = {wordsPerMinute} palabras por minuto</p>

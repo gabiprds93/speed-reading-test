@@ -13,7 +13,7 @@ export default function Timer() {
   const hoursText = formatTime(hours)
 
   return (
-    <div className="w-28 text-[#0201CE] border border-[#0201CE] rounded-3xl px-5 py-3">
+    <div className="w-28 text-[#0201CE] px-4 py-3 text-xl h-12">
       {hoursText}:{minutesText}:{secondsText}
     </div>
   )
