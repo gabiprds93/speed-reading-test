@@ -15,9 +15,11 @@ export interface ITime {
 
 export interface IStoreTime {
   time: ITime
+  isStart: boolean
   isFinish: boolean
   changeSeconds: (seconds: number) => void
   changeMinutes: (minutes: number) => void
   changeHours: (hours: number) => void
+  playTime: () => void
   stopTime: () => void
 }

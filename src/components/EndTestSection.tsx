@@ -10,7 +10,7 @@ export default function EndTestSection() {
   const [showResults, setShowResults] = useState(false)
   const [timeInMinutes, setTimeInMinutes] = useState(0)
   const [wordsPerMinute, setWordsPerMinute] = useState(0)
-  const { stopTime, time } = useTime()
+  const { stopTime, time, isStart } = useTime()
 
   const handleEndButton = () => {
     setShowResults(true)
@@ -27,6 +27,8 @@ export default function EndTestSection() {
       setWordsPerMinute(Math.round(WORDS_IN_TEXT / newTimeInMinutes))
     }
   }, [showResults, time])
+
+  if (!isStart) return
 
   return (
     <>
