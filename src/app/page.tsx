@@ -3,8 +3,10 @@ import EndTestSection from "@/components/EndTestSection"
 
 export default function Home() {
   return (
-    <main className="bg-white max-w-screen-lg m-auto rounded-2xl flex flex-col items-center h-full p-8 gap-8 overflow-auto">
-      <h1 className="text-4xl">Test de Lectura Rápida</h1>
+    <main className="bg-white max-w-screen-lg m-auto rounded-2xl flex flex-col items-center h-full p-4 sm:p-6 md:p-8 gap-7 overflow-auto">
+      <h1 className="text-2xl sm:text-3xl md:text-4xl text-center">
+        Test de Lectura Rápida
+      </h1>
 
       <StartTestSection />
 
