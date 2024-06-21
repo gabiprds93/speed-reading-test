@@ -8,8 +8,6 @@ export default function Home() {
 
       <StartTestSection />
 
-      <EndTestSection />
-
       <div className="grid gap-4 text-justify">
         <p>
           Había una vez un principito que vivía en un pequeño asteroide. Su
@@ -59,6 +57,8 @@ export default function Home() {
           planeta con más atención, para descubrir sus secretos y tesoros.
         </p>
       </div>
+
+      <EndTestSection />
     </main>
   )
 }

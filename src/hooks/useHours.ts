@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 
+import { useTime } from "./useTime"
 import { LAST_NUMBER_IN_TIME } from "@/utils/constants"
 
 export function useHours({
@@ -10,8 +11,14 @@ export function useHours({
   minutes: number
 }) {
   const [hours, setHours] = useState(0)
+  const { isFinish, changeHours } = useTime()
 
   useEffect(() => {
+    if (isFinish) {
+      changeHours(hours)
+      return
+    }
+
     let timeout: NodeJS.Timeout | null = null
 
     if (minutes === LAST_NUMBER_IN_TIME && seconds === LAST_NUMBER_IN_TIME) {
@@ -23,7 +30,7 @@ export function useHours({
     return () => {
       timeout && clearTimeout(timeout)
     }
-  }, [minutes, seconds])
+  }, [changeHours, hours, isFinish, minutes, seconds])
 
   return hours
 }

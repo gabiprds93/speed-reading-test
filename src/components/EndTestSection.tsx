@@ -1,26 +1,48 @@
 "use client"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 import Button from "./Button"
+import { useTime } from "@/hooks/useTime"
 import StopIcon from "@/icons/StopIcon"
+import { MINUTES_IN_HOUR, WORDS_IN_TEXT } from "@/utils/constants"
 
 export default function EndTestSection() {
   const [showResults, setShowResults] = useState(false)
+  const [timeInMinutes, setTimeInMinutes] = useState(0)
+  const [wordsPerMinute, setWordsPerMinute] = useState(0)
+  const { stopTime, time } = useTime()
+
+  const handleEndButton = () => {
+    setShowResults(true)
+    stopTime()
+  }
+
+  useEffect(() => {
+    if (showResults) {
+      const secondsInMinutes = time.seconds / MINUTES_IN_HOUR
+      const hoursInMinutes = time.hours * MINUTES_IN_HOUR
+      const newTimeInMinutes = hoursInMinutes + time.minutes + secondsInMinutes
+
+      setTimeInMinutes(Number(newTimeInMinutes.toFixed(2)))
+      setWordsPerMinute(Math.round(WORDS_IN_TEXT / newTimeInMinutes))
+    }
+  }, [showResults, time])
 
   return (
     <>
       {!showResults && (
-        <Button onClick={() => setShowResults(true)}>
+        <Button onClick={handleEndButton}>
           <StopIcon />
+
           <span>Terminar</span>
         </Button>
       )}
 
       {showResults && (
         <div>
-          <p>Velocidad de Lectura = 0.07 minutos</p>
+          <p>Velocidad de Lectura = {timeInMinutes} minutos</p>
 
-          <p>Velocidad Promedio = 2586 palabras palabras por minuto</p>
+          <p>Velocidad Promedio = {wordsPerMinute} palabras por minuto</p>
         </div>
       )}
     </>

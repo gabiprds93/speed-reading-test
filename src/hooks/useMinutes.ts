@@ -1,11 +1,18 @@
 import { useEffect, useState } from "react"
 
+import { useTime } from "./useTime"
 import { LAST_NUMBER_IN_TIME } from "@/utils/constants"
 
 export function useMinutes({ seconds }: { seconds: number }) {
   const [minutes, setMinutes] = useState(0)
+  const { isFinish, changeMinutes } = useTime()
 
   useEffect(() => {
+    if (isFinish) {
+      changeMinutes(minutes)
+      return
+    }
+
     const timeout = setTimeout(() => {
       setMinutes((prev) => {
         if (prev === LAST_NUMBER_IN_TIME && seconds === LAST_NUMBER_IN_TIME)
@@ -18,7 +25,7 @@ export function useMinutes({ seconds }: { seconds: number }) {
     return () => {
       clearTimeout(timeout)
     }
-  }, [minutes, seconds])
+  }, [changeMinutes, isFinish, minutes, seconds])
 
   return minutes
 }
