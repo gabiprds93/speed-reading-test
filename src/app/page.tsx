@@ -1,5 +1,12 @@
+import type { Metadata } from "next"
+
 import StartTestSection from "@/components/StartTestSection"
 import EndTestSection from "@/components/EndTestSection"
+
+export const metadata: Metadata = {
+  title: "Test de lectura rápida",
+  description: "Descubre cuántas palabras por minuto lees con nuestra herramienta en línea. Evalúa tu velocidad lectora y recibe consejos personalizados para mejorar tu comprensión y eficiencia al leer.",
+}
 
 export default function Home() {
   return (
