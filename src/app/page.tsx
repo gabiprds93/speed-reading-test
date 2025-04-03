@@ -11,13 +11,13 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <main className="bg-white max-w-screen-lg m-auto rounded-2xl flex flex-col items-center h-full p-4 sm:p-6 md:p-8 gap-7 overflow-auto">
-      <h1 className="text-2xl sm:text-3xl md:text-4xl text-center">
+      <h1 className="text-2xl sm:text-3xl md:text-4xl text-center text-black">
         Test de Lectura Rápida
       </h1>
 
       <StartTestSection />
 
-      <div className="grid gap-4 text-justify">
+      <div className="grid gap-4 text-justify text-black">
         <p>
           Había una vez un principito que vivía en un pequeño asteroide. Su
           planeta era apenas más grande que una casa, y tenía tres volcanes, uno
